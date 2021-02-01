@@ -7,6 +7,7 @@ final class LoopTimerTask extends TimerTask {
     float a;
     final float velocityY;
     final LoopView loopView;
+    final float maxSpeed = 6000F;
 
     LoopTimerTask(LoopView loopview, float velocityY) {
         super();
@@ -18,11 +19,11 @@ final class LoopTimerTask extends TimerTask {
     @Override
     public final void run() {
         if (a == Integer.MAX_VALUE) {
-            if (Math.abs(velocityY) > 2000F) {
+            if (Math.abs(velocityY) > maxSpeed) {
                 if (velocityY > 0.0F) {
-                    a = 2000F;
+                    a = maxSpeed;
                 } else {
-                    a = -2000F;
+                    a = -maxSpeed;
                 }
             } else {
                 a = velocityY;

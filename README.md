@@ -8,6 +8,12 @@
 
 A simple Wheel Picker for Android (For IOs is using Picker from react-native)
 
+## Fork
+
+This fork differens from base on the following fronts:
+
+* The max Android wheel speed is trippled.
+
 ## Example
 
 You can clone the repo and run example from ./example folder
